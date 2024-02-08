@@ -14,6 +14,7 @@ module.exports = {
       },
     },
     colors: {
+      harp: "#deede1",
       wheatfield: "#f2f0ca",
       manz: "#e9ed68",
       mossGreen: "#b3dca3",
