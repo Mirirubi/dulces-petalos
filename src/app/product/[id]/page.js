@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+const fertilizerAdapter = { phosphorus: "fosforado", nitrogen: "nitrogenado" };
 export default function Details({ params }) {
   const [data, setData] = useState(null);
 
@@ -50,7 +51,10 @@ export default function Details({ params }) {
               <div className="text-sm">{data.binomialName}</div>
               <ul className="list-inside my-8 ml-4">
                 <li>Regar {data.wateringsPerWeek} veces a la semana</li>
-                <li>Tipo de fertilizante: {data.fertilizerType}</li>
+                <li>
+                  Fertilizante recomendado:{" "}
+                  {fertilizerAdapter[data.fertilizerType]}
+                </li>
                 <li>Hasta {data.heightInCm} cm de alto</li>
               </ul>
               <div className="text-2xl font-medium flex justify-end">
