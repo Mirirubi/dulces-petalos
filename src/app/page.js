@@ -75,16 +75,18 @@ export default function Home() {
             {displayedData.map((product) => {
               return (
                 <Link href={`/product/${product.id}`}>
-                  <div className="flex flex-col rounded-2xl bg-harp items-center p-2 m-2">
+                  <div className="button flex flex-col rounded-2xl bg-harp items-center p-2 m-2">
                     <div className="text-lg font-bold py-2">{product.name}</div>
-                    <Image
-                      src={product.imgUrl}
-                      alt={`Imagen de ${product.name}`}
-                      unoptimized
-                      width={240}
-                      height={240}
-                      objectPosition="center"
-                    ></Image>
+                    <div className="imageContainer">
+                      <Image
+                        src={product.imgUrl}
+                        alt={`Imagen de ${product.name}`}
+                        unoptimized
+                        width={240}
+                        height={240}
+                        objectPosition="center"
+                      ></Image>
+                    </div>
                     <div className="py-2 flex flex-col text-center">
                       <div className="text-sm">{product.binomialName}</div>
                       <div className="text-lg font-semibold">

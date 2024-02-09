@@ -29,7 +29,7 @@ export default function Details({ params }) {
         <div div className="product mb-32 max-w-3xl mx-auto">
           <div className="px-8 flex justify-end">
             <Link href={`/`}>
-              <div className="rounded-full bg-harp text-center max-w-min px-6 p-1">
+              <div className="button rounded-full bg-harp text-center max-w-min px-6 p-1">
                 Back
               </div>
             </Link>
@@ -45,7 +45,7 @@ export default function Details({ params }) {
                 objectPosition="center"
               ></Image>
             </div>
-            <div className=" mx-auto flex flex-col justify-center p-8 w-80">
+            <div className="mx-auto flex flex-col justify-center p-8 w-90">
               <div className="text-2xl font-bold">{data.name}</div>
               <div className="text-sm">{data.binomialName}</div>
               <ul className="list-inside my-8 ml-4">
