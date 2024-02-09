@@ -49,8 +49,8 @@ export default function Home() {
 
   return (
     <>
-      <div className="border-2 border-firefly p-2">
-        <div className="border-2 border-tradewind p-8">
+      <div className="p-2">
+        <div className="p-8">
           <div className="border-2 rounded-2xl border-harp flex flex-row items-center gap-5 p-1">
             <svg class="w-8 h-8 m-2 mx-4" fill="none" viewBox="0 0 20 20">
               <path
@@ -71,7 +71,7 @@ export default function Home() {
         </div>
 
         {displayedData ? (
-          <div className="product-list border-2 border-paradiso grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          <div className="product-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {displayedData.map((product) => {
               return (
                 <Link href={`/product/${product.id}`}>
