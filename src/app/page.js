@@ -37,7 +37,6 @@ export default function Home() {
   };
 
   const handleChange = (event) => {
-    console.log(event.target.value);
     let searchTerm = event.target.value;
 
     setDisplayedData(filtrarData(apiData, searchTerm));
@@ -52,10 +51,10 @@ export default function Home() {
       <div className="p-2">
         <div className="p-8">
           <div className="border-2 rounded-2xl border-harp flex flex-row items-center gap-5 p-1">
-            <svg class="w-8 h-8 m-2 mx-4" fill="none" viewBox="0 0 20 20">
+            <svg className="w-8 h-8 m-2 mx-4" fill="none" viewBox="0 0 20 20">
               <path
                 stroke="#deede1"
-                stroke-width="10%"
+                strokeWidth="10%"
                 d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
               />
             </svg>
@@ -74,7 +73,7 @@ export default function Home() {
           <div className="product-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
             {displayedData.map((product) => {
               return (
-                <Link href={`/product/${product.id}`}>
+                <Link href={`/product/${product.id}`} key={product.id}>
                   <div className="button flex flex-col rounded-2xl bg-harp items-center p-2 m-2">
                     <div className="text-lg font-bold py-2">{product.name}</div>
                     <div className="imageContainer">
