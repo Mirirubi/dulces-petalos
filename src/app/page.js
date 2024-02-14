@@ -26,7 +26,7 @@ export default function Home() {
     });
   }, []);
 
-  const filtrarData = (data, searchString) => {
+  const dataFilter = (data, searchString) => {
     return data.filter(function (item) {
       const prop1 = item.name.toLowerCase();
       const prop2 = item.binomialName.toLowerCase();
@@ -39,7 +39,7 @@ export default function Home() {
   const handleChange = (event) => {
     let searchTerm = event.target.value;
 
-    setDisplayedData(filtrarData(apiData, searchTerm));
+    setDisplayedData(dataFilter(apiData, searchTerm));
 
     const inputValue = event.target.value;
 

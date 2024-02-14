@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const fertilizerAdapter = { phosphorus: "fosforado", nitrogen: "nitrogenado" };
+
 export default function Details({ params }) {
   const [data, setData] = useState(null);
 
